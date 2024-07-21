@@ -17,6 +17,31 @@ The Nimesa project is a Spring Boot application designed to interact with AWS EC
 - Maven or Gradle
 - H2/MySQL/PostgreSQL database
 
+Configuration
+===============
+
+**AWS Credentials**
+----------------
+
+Update the AWS credentials in your environment variables:
+
+### Unix/Linux/MacOS
+
+```bash
+export AWS_ACCESS_KEY_ID=your_access_key_id
+export AWS_SECRET_ACCESS_KEY=your_secret_access_key
+export AWS_REGION=your_aws_region
+```
+
+### Windows
+```
+set AWS_ACCESS_KEY_ID=your_access_key_id
+set AWS_SECRET_ACCESS_KEY=your_secret_access_key
+set AWS_REGION=your_aws_region
+```
+Replace your_access_key_id, your_secret_access_key, and your_aws_region with your actual AWS credentials and region.
+
+
 ## Database Configuration
 
 Configure your database connection in `src/main/resources/application.properties`:
