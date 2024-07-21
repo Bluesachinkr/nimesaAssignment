@@ -89,6 +89,24 @@ CREATE TABLE job ( job_id VARCHAR(255) PRIMARY KEY, status VARCHAR(255), timesta
 
 The API provides the following endpoints:
 
+### Discover Services
+* **URL:** `/discover`
+* **Method:** `POST`
+* **Request Body:** List of services to discover (e.g., `["EC2", "S3"]`)
+* **Response:** `200 OK` with `JobId`
+
+### Get Job Result
+* **URL:** `/job/result`
+* **Method:** `GET`
+* **Parameters:** `jobId` - The ID of the job to retrieve the result for.
+* **Response:** `200 OK` with the job status.
+
+### Get Discovery Result
+* **URL:** `/discovery/result`
+* **Method:** `GET`
+* **Parameters:** `serviceName` - The name of the service to retrieve discovery results for.
+* **Response:** `200 OK` with a list of discovered resources.
+
 ### Get S3 Buckets
 
 * **URL:** `/s3/buckets`
